@@ -7,7 +7,7 @@ services:
     ports:
       - "3002:3000"
     environment:
-      DATABASE_URL: postgresql://storyfit:${POSTGRES_PASSWORD}@db:5432/storyfit
+      DATABASE_URL: ${DATABASE_URL}
       GEMINI_API_KEY: ${GEMINI_API_KEY}
       JWT_SECRET: ${JWT_SECRET}
       JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
