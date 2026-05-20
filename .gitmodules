@@ -2,3 +2,7 @@
 	path = apps/web
 	url = https://github.com/Jincchus/StoryFit-web.git
 	branch = main
+[submodule "apps/mobile"]
+	path = apps/mobile
+	url = https://github.com/Jincchus/StoryFit-app.git
+	branch = main
