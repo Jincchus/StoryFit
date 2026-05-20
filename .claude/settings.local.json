@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Remove-Item *)",
+      "PowerShell(Set-Location *)",
+      "PowerShell(Start-Process \"C:\\\\StoryFit\\\\ignore\\\\화면디자인\\\\StoryFit\\\\index.html\")",
+      "Bash(python -m http.server 8080)",
+      "PowerShell(Start-Sleep -Seconds 2; Start-Process \"http://localhost:8080\")",
+      "PowerShell(Start-Process python -ArgumentList \"-m\", \"http.server\", \"8080\" -WorkingDirectory \"C:\\\\StoryFit\\\\ignore\\\\화면디자인\\\\StoryFit\" -WindowStyle Minimized)",
+      "PowerShell(python --version 2>&1; node --version 2>&1; npx --version 2>&1)",
+      "PowerShell(Start-Process cmd -ArgumentList \"/c\", \"npx serve `\"C:\\\\StoryFit\\\\ignore\\\\화면디자인\\\\StoryFit`\" -p 8080\" -WindowStyle Normal)",
+      "PowerShell(Start-Sleep -Seconds 4; Start-Process \"http://localhost:8080\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\\\(auth\\)\\\\login\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\\\(main\\)\\\\characters\\\\new\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\\\(main\\)\\\\personas\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\\\(main\\)\\\\conversations\\\\new\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\\\(main\\)\\\\conversations\\\\[id]\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\auth\\\\login\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\auth\\\\register\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\auth\\\\refresh\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\characters\\\\[id]\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\personas\\\\[id]\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\conversations\\\\[id]\\\\messages\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\conversations\\\\[id]\\\\chat\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\app\\\\api\\\\lorebooks\\\\[id]\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\components\\\\ui\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\components\\\\shell\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\lib\\\\ai\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\data\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\types\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\providers\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\prisma\")",
+      "PowerShell(New-Item *)"
+    ]
+  }
+}
