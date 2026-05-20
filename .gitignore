@@ -1,4 +1,5 @@
 ignore/
+uploads/
 
 node_modules/
 .env
