@@ -31,7 +31,13 @@
       "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\types\")",
       "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\providers\")",
       "Bash(New-Item -ItemType Directory -Force \"C:\\\\StoryFit\\\\apps\\\\web\\\\prisma\")",
-      "PowerShell(New-Item *)"
+      "PowerShell(New-Item *)",
+      "Bash(pm2 list *)",
+      "Bash(docker exec storyfit-db-1 *)",
+      "Bash(docker restart *)",
+      "Bash(git -C /home/server/StoryFit status)",
+      "Bash(git -C /home/server/StoryFit diff)",
+      "Bash(git *)"
     ]
   }
 }
