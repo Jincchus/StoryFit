@@ -47,17 +47,17 @@ API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo D
 
 ## Deploy
 
-`apps/web` 파일 수정 후 항상 두 단계로 푸시:
+After modifying files in `apps/web`, always push in two steps:
 
 ```bash
-# 1. 서브모듈 (apps/web) — main 브랜치
-cd apps/web && git add <파일> && git commit -m "..." && git push origin main
+# 1. Submodule (apps/web) — main branch
+cd apps/web && git add <files> && git commit -m "..." && git push origin main
 
-# 2. 부모 레포 포인터 업데이트 — master 브랜치
+# 2. Update parent repo submodule pointer — master branch
 cd ../.. && git add apps/web && git commit -m "Chore: apps/web 서브모듈 포인터 업데이트 (...)" && git push origin master
 ```
 
-서버 반영 커맨드:
+Server deploy command:
 ```bash
 git pull origin master && git submodule update --remote apps/web && docker compose up --build -d
 ```
