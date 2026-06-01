@@ -14,7 +14,7 @@ API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo D
 - **Claude adapter penalty unsupported**: Replace frequencyPenalty/presencePenalty with repetition-prevention instructions in the base rules block.
 - **Regeneration behavior**: Delete the last assistant message then regenerate. User message edit deletes all subsequent messages.
 - **Avatar image v1**: External URL input only. Server upload added in v2.
-- **Message.parentId v1**: Always null. Branch tree activated in v2.
+- **Message.parentId**: Fully active — branch create/switch/sibling navigation all implemented. parentId links messages into a tree; `isSelected` marks the active branch path.
 
 ## Novel-style Rendering
 
