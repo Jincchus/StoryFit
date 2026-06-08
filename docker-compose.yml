@@ -15,6 +15,7 @@ services:
       GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud_creds.json
       JWT_SECRET: ${JWT_SECRET}
       JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
+      WHIF_SESSION_COOKIE: ${WHIF_SESSION_COOKIE:-}
     volumes:
       - ./uploads:/app/uploads
       - ./apps/web/public/themes:/app/public/themes
