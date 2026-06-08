@@ -18,6 +18,7 @@ services:
     volumes:
       - ./uploads:/app/uploads
       - ./apps/web/public/themes:/app/public/themes
+      - melting_profile:/app/browser-profiles/melting
       - /home/server/.config/gcloud/application_default_credentials.json:/tmp/gcloud_creds.json:ro
     depends_on:
       db:
@@ -47,6 +48,7 @@ services:
 
 volumes:
   pgdata:
+  melting_profile:
 
 networks:
   internal:
