@@ -10,3 +10,7 @@ out/
 dist/
 .turbo/
 *.tsbuildinfo
+
+# Claude Code 머신 로컬 설정 (추적 제외)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
