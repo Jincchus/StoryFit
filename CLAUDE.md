@@ -15,6 +15,7 @@ API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo D
 - **Regeneration behavior**: Delete the last assistant message then regenerate. User message edit deletes all subsequent messages.
 - **Avatar image v1**: External URL input only. Server upload added in v2.
 - **Message.parentId**: Fully active — branch create/switch/sibling navigation all implemented. parentId links messages into a tree; `isSelected` marks the active branch path.
+- **사용자 기능 가이드 동기화**: 사용자가 체감할 수 있는 새 기능이나 설정을 추가/변경하면, `apps/web/app/(main)/guide/page.tsx`의 `FEATURE_SECTIONS`에도 해당 항목을 함께 추가/수정한다.
 
 ## Novel-style Rendering
 
