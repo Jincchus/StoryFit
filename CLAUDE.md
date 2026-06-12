@@ -1,6 +1,6 @@
 # StoryFit — Roleplay AI Chatbot
 
-Novel-style roleplay AI chat service — Turborepo monorepo, Next.js 14 (web + API) + Expo (mobile).  
+Novel-style roleplay AI chat service — parent repo with git submodule (apps/web), Next.js 14 (web + API) + Expo WebView wrapper (mobile).  
 API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo Dev Client
 
 ## Rules (always follow)
@@ -30,13 +30,11 @@ API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo D
 | Layer | Tech |
 |-------|------|
 | Web frontend | Next.js 14, React |
-| Mobile | Expo (iOS/Android) |
-| Shared package | packages/shared (types, API client) |
+| Mobile | Expo WebView wrapper (iOS/Android) — loads the deployed web app, no shared package |
 | Backend | Next.js API Routes |
 | DB | PostgreSQL + Prisma ORM |
 | Auth | JWT (Access 1h + Refresh 30d) |
-| AI | Gemini / ChatGPT / Claude (adapter pattern) |
-| Build | Turborepo |
+| AI | Gemini only (`gemini-2.5-flash`) — Claude/ChatGPT shown as "준비 중" (disabled) in UI, adapters not implemented; `streamChat` falls back to Gemini |
 
 ## Ports
 
