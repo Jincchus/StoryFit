@@ -6,7 +6,7 @@ API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo D
 ## Rules (always follow)
 
 - **AI key server isolation**: AI API keys must only be used in server-side code (Next.js API Routes). Never expose to client.
-- **System prompt assembly order is fixed**: Base rules(0) → UserPersona(1) → coreMemory(2) → statusTimeline(3) → Character systemPrompt+scenarioDescription(4) → exampleDialogues(5) → Lorebook(6) → long-term memory(7) → recent messages(8). Never reorder.
+- **System prompt assembly order is fixed**: static prefix first — globalRules → personalRules → base rules → style → modeRules → UserPersona → character settings → scenario → openingScene → exampleDialogues — then volatile tail: statusTimeline → stats → inventory → Lorebook → long-term memory → coreMemory → closingRules. Static blocks MUST stay before volatile ones so the prefix hits Gemini implicit caching. Never reorder.
 - **Lorebook token cap**: Sort matched entries by priority descending; exclude entries once cumulative total exceeds 1,000 tokens.
 - **isSummarizing flag**: Prevent concurrent memory summarization — use `Conversation.isSummarizing` to block duplicate runs.
 - **Partial stream save**: When SSE connection is aborted via AbortController, save the received partial content; discard only empty responses.
