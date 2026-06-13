@@ -15,6 +15,7 @@ services:
       GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud_creds.json
       JWT_SECRET: ${JWT_SECRET}
       JWT_REFRESH_SECRET: ${JWT_REFRESH_SECRET}
+      CRON_SECRET: ${CRON_SECRET}
     volumes:
       - ./uploads:/app/uploads
       - ./apps/web/public/themes:/app/public/themes
