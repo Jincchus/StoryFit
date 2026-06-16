@@ -34,7 +34,7 @@ API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo D
 | Backend | Next.js API Routes |
 | DB | PostgreSQL + Prisma ORM |
 | Auth | JWT (Access 1h + Refresh 30d) |
-| AI | Gemini only (`gemini-2.5-flash`) — Claude/ChatGPT shown as "준비 중" (disabled) in UI, adapters not implemented; `streamChat` falls back to Gemini |
+| AI | Gemini only — 채팅(스토리/멀티) `gemini-2.5-pro`, 백그라운드 유틸(요약·리캡·핵심메모리 압축) `gemini-2.5-flash`. Pro는 thinking을 끌 수 없어 `thinkingBudget` 0/미설정 시 동적(-1)으로 보정(`lib/ai/gemini.ts`). ⚠️ Pro는 무료 기간 한정(2026-10 종료 예정) — 종료 시 `GEMINI_CHAT_MODEL`을 flash로 복귀. Claude/ChatGPT는 "준비 중"(disabled), 어댑터 미구현; `streamChat` falls back to Gemini |
 
 ## Ports
 
