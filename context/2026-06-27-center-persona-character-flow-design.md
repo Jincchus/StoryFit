@@ -96,8 +96,9 @@
 
 - 신규: `lib/centerChat.ts`, `components/ui/ChatModeModal.tsx`
 - 수정: `prisma/schema.prisma`, `lib/systemPrompt.ts`(+ `buildMultiStorySystemPrompt`),
-  `lib/chatPipeline.ts`(systemPrompt 빌더 **유일** 호출부 — `conversation.personaFlipPlaceholders`를
-  읽어 빌더에 전달. 따라서 chat/regenerate/continue/recap 라우트 개별 수정 불필요),
+  `lib/chatPipeline.ts`(`buildModeSystemPrompt`에 `flipPersonaPlaceholders` 인자 추가해 빌더에 전달),
+  `app/api/conversations/[id]/{chat,regenerate,continue}/route.ts`(각 `buildModeSystemPrompt` 호출에
+  `flipPersonaPlaceholders: conv.personaFlipPlaceholders ?? true` 전달 — 기존 `allowPersonaDialogue`와 동일 패턴),
   `components/ui/WhifPersonaModal.tsx`, `app/api/characters/route.ts`(unassigned 필터),
   `app/api/conversations/route.ts`(personaFlipPlaceholders 수용), 9개 센터 상세 페이지,
   `app/(main)/guide/page.tsx`(기능 가이드 동기화).
