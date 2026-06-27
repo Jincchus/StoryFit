@@ -17,6 +17,7 @@ API: `http://localhost:3000/api` | Web: `http://localhost:3000` | Mobile: Expo D
 - **Message.parentId**: Fully active — branch create/switch/sibling navigation all implemented. parentId links messages into a tree; `isSelected` marks the active branch path.
 - **사용자 기능 가이드 동기화**: 사용자가 체감할 수 있는 새 기능이나 설정을 추가/변경하면, `apps/web/app/(main)/guide/page.tsx`의 `FEATURE_SECTIONS`에도 해당 항목을 함께 추가/수정한다.
 - **플레이스홀더 치환 필수**: 센터 상세 페이지에서 화면에 렌더링되는 **모든** 텍스트 필드(소개글·설명·캐릭터 설정·에피소드 제목·첫 장면 등)에 반드시 `replaceDisplayPlaceholders(text, userName, charNames)`를 적용한다. `charNames`는 `col.characters.map(c => c.name)` 전체 배열을 전달해야 한다(`{{char1}}`, `{{char2}}`… 모두 치환). 새 센터 페이지 작업 시, 그리고 기존 페이지 수정 시 모든 렌더 필드를 grep으로 점검해 누락을 검증한다: `grep -n "{[^}]*}" page.tsx | grep -v "replaceDisplay\|NovelText\|style\|className\|key\|src\|alt\|href\|onClick\|onChange\|disabled\|type\|placeholder"` — 남은 항목 중 사용자 입력 데이터가 포함된 것은 전부 치환 대상이다.
+- **센터 공통 동작 ↔ 가이드 동기화**: 센터 공통 검색/필터/태그/페르소나 등 동작을 추가·변경하면 `context/adding-a-center.md`도 함께 갱신해, 새 센터 추가 시 누락 없이 전파되도록 한다.
 
 ## Novel-style Rendering
 

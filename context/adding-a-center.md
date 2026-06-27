@@ -75,6 +75,10 @@
 - `app/(main)/page.tsx` — 홈 "외부 가져오기" 카드 (큐레이션된 설명 문구라 수동 유지)
 - `app/(main)/guide/page.tsx` — 사용자 기능 가이드(`FEATURE_SECTIONS`)
   - CLAUDE.md 규칙: 사용자 체감 기능 추가/변경 시 가이드 동기화 필수
+- **리스트 페이지 검색/필터/태그(필수 패턴)**: 공용 `components/ui/TagFilterBar`를 쓰고
+  `storageKey="<storagePrefix>_tagcollapse"`를 전달한다(태그바 기본 접힘 + 접기 상태 센터별 기억).
+  태그 목록·카운트(`buildTagGroups`/`tagCounts`)는 **뷰+성별+검색이 적용된 base(태그 자신 제외)** 로
+  계산해, 진행중 탭이면 진행중 카드 태그만 보이게 한다(전체 센터·타 센터와 동일한 좁혀가기).
 
 ### F. 캐릭터 직접 생성/편집 연동 (해당 센터가 isXxx 파라미터를 쓰는 경우)
 - `app/(main)/characters/new/page.tsx`
@@ -96,6 +100,8 @@
 - [ ] `npx tsc --noEmit` 통과
 - [ ] 리스트→상세→대화 시작 플로우 수동 확인
 - [ ] Dock 탐색 탭이 새 센터 경로에서 하이라이트되는지
+- [ ] 뷰탭(진행/대기/완결) 전환 시 해당 상태 카드의 태그만 노출되는지
+- [ ] 태그 필터바가 기본 접힘이고, 펼친 상태가 새로고침 후에도 유지되는지(센터별 독립)
 - [ ] `docker compose up --build` 빌드 성공
 
 ---
