@@ -56,6 +56,10 @@
 - `lib/import/newcenter.ts` — `captureNewcenter(url)` 작성 (`Captured` 반환)
 - `app/api/characters/import/route.ts` — `matchesHost(url, ...)` 분기 + import 추가
 - 미리보기 흐름이 필요하면 `app/api/characters/import/preview/route.ts`
+- **재가져오기 backfill**: 같은 sourceUrl 컬렉션이 이미 있으면 `runImport`가 `captured.assembledResult`
+  기준으로 **빈 필드만** 기존 캐릭터에 채운다(사용자 편집 보존). 따라서 capture는 가능하면
+  `assembledResult`를 결정적으로 반환해야 backfill이 동작한다(AI 분류만 거치는 센터는 backfill 생략).
+  좋아요 시트(`LikedImportSheet`)는 ✓ 완료 항목도 탭해 업데이트 대상으로 선택할 수 있다.
 
 ### C. CSS
 - `app/globals.css` — `--<prefix>-*` 변수 세트 + `.<prefix>-*` 클래스 세트 추가
